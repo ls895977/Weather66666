@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/setupmeng_phonto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/noify_table_back"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/imageView_head"
+                    android:layout_width="@dimen/dip_70"
+                    android:layout_height="@dimen/dip_70"
+                    android:layout_margin="@dimen/dip_10"
+                    android:scaleType="fitCenter"
+                    app:riv_border_color="#333333"
+                    app:riv_corner_radius="30dip"
+                    app:riv_mutate_background="true"
+                    app:riv_tile_mode="repeat" />
+
+                <TextView
+                    android:id="@+id/setup_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dip_10"
+                    android:layout_toRightOf="@+id/imageView_head" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip0_1"
+                android:background="@color/grey" />
+
+            <RelativeLayout
+                android:id="@+id/setupmeng_Languagesettings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip_100"
+                android:background="@drawable/noify_table_back">
+
+                <com.naran.ui.view.MnTextView
+                    android:layout_width="@dimen/dip_50"
+                    android:layout_height="@dimen/dip_100"
+                    android:layout_marginLeft="16dp"
+                    android:padding="@dimen/dip_10"
+                    android:text=" \n"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip0_1"
+                android:background="@color/grey" />
+
+            <RelativeLayout
+                android:id="@+id/setupmeng_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip_100"
+                android:background="@drawable/noify_table_back">
+                <com.naran.ui.view.MnTextView
+                    android:layout_width="@dimen/dip_50"
+                    android:layout_height="@dimen/dip_70"
+                    android:layout_marginLeft="@dimen/dip_20"
+                    android:layout_centerVertical="true"
+                    android:text="ᠪᠠᠬᠠᠲᠠᠢ  \nᠵᠦᠢᠯᠡᠰ"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip0_1"
+                android:background="@color/grey" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

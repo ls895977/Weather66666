@@ -1,0 +1,53 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:1:1-12:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:1:1-12:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:1:1-12:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:1:1-12:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:1:1-12:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:1:1-12:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:1:1-12:12
+	package
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:2:5-32
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:1:1-12:12
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:1:1-12:12
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:4:5-76
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:4:22-73
+application
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:5:5-10:19
+	android:supportsRtl
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:8:9-35
+	android:label
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:7:9-41
+	android:allowBackup
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:6:9-35
+activity#com.lykj.aextreme.afinal.libzxing.activity.CaptureActivity
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:9:9-94
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml:9:19-92
+uses-sdk
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/src/main/AndroidManifest.xml

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_50">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_50"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="@dimen/dip_40"
+                android:layout_height="@dimen/dip_40"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="管理地区"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fond_16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_120"
+        android:layout_gravity="bottom"
+        android:background="#2f5584">
+
+        <RelativeLayout
+            android:id="@+id/btnAdd"
+            android:layout_width="@dimen/dip_100"
+            android:layout_height="@dimen/dip_40"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dip_5"
+            android:layout_marginBottom="@dimen/dip_10"
+            android:background="@drawable/btn_bg2">
+
+            <ImageView
+                android:layout_width="@dimen/dip_60"
+                android:layout_height="@dimen/dip_40"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="16dp"
+                android:src="@mipmap/icon_addmm" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

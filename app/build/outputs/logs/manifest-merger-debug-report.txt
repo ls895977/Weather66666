@@ -1,0 +1,382 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:2:1-137:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:2:1-137:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:2:1-137:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:2:1-137:12
+MERGED from [:mongolian-support] /Users/lishan/Desktop/xiangmu/Weather66666/mongolian-support/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-17:12
+MERGED from [:aextreme] /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-20:12
+MERGED from [com.android.support:design:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/design-25.1.1.aar/dbf45c44dbef2bd7fd34951ad9c2453b/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.1.1.aar/697d9a169cf3680f3219d8b3ab1a5ea2/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:transition:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/transition-25.1.1.aar/58e497e25f238dc6e57697c5b9862553/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-v4:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-v4-25.1.1.aar/897b6f99ef74677ba02c4d32b74a46c6/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/lishan/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3247cfd659ac53f6a08e0c96932c2bf8/AndroidManifest.xml:2:1-11:12
+MERGED from [net.soulwolf.widget:ratiolayout:2.1.0] /Users/lishan/.gradle/caches/transforms-1/files-1.1/ratiolayout-2.1.0.aar/0f56c4604f47e772bf056a226db4c142/AndroidManifest.xml:2:1-12:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/19356e7a5bb3cde1188a471d2960504a/AndroidManifest.xml:15:1-21:12
+MERGED from [top.zibin:Luban:1.1.8] /Users/lishan/.gradle/caches/transforms-1/files-1.1/Luban-1.1.8.aar/7f8fc8e81e66a1a470ff622ede84d540/AndroidManifest.xml:2:1-11:12
+MERGED from [com.makeramen:roundedimageview:2.3.0] /Users/lishan/.gradle/caches/transforms-1/files-1.1/roundedimageview-2.3.0.aar/aeb32e0cfd7a80e093f41637200d8735/AndroidManifest.xml:2:1-9:12
+MERGED from [com.bigkoo:svprogresshud:1.0.6] /Users/lishan/.gradle/caches/transforms-1/files-1.1/svprogresshud-1.0.6.aar/b7182c8bcb5f8581b67e6cea68440533/AndroidManifest.xml:2:1-11:12
+MERGED from [com.yanzhenjie:recyclerview-swipe:1.2.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/recyclerview-swipe-1.2.1.aar/0057df4ea915647d4a42d44d15783ad0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.1.1.aar/e86d345089f3bf08e83c67d0da5542ad/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.1.1.aar/3dd56666a67e1fd2cc908ed4a3b3d1d3/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:recyclerview-v7:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.1.1.aar/c5e973c16aaf8a66f93838f74694f516/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-fragment-25.1.1.aar/71791f65d3a3eb9b10f8ed9139f51ff7/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.1.1.aar/ece0565a2332039fa6763b435a8e623b/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.1.1.aar/36cef745e3bbc46f44a2e28fb1f75390/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.1.1.aar/685adc3e61df8bac381bc348dc9f9ed4/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-compat-25.1.1.aar/ea87acd488397aa69be24cf433610313/AndroidManifest.xml:17:1-27:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:2:1-137:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:2:1-137:12
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:2:1-137:12
+	package
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:4:5-32
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:2:1-137:12
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:2:1-137:12
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:6:5-8:47
+	tools:ignore
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:8:9-44
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:7:9-68
+uses-permission#android.permission.CONNECTIVITY_CHANGE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:9:5-78
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:9:22-75
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:11:22-77
+uses-permission#com.android.launcher.permission.READ_SETTINGS
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:12:5-85
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:12:22-82
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:14:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:16:5-79
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:16:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:18:5-76
+MERGED from [:aextreme] /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-76
+MERGED from [:aextreme] /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-76
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:18:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:20:22-76
+uses-permission#android.permission.CALL_PHONE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:22:5-69
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:22:22-66
+uses-permission#android.permission.INTERNET
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:25:5-67
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:25:22-64
+uses-permission#baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.naran.weather
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:26:5-102
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:26:22-99
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:31:5-75
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:31:22-72
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:32:5-81
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:32:22-78
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:33:5-35:47
+	tools:ignore
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:35:9-44
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:34:9-57
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:36:5-66
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:36:22-63
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:37:5-75
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:37:22-72
+uses-permission#android.permission.ACCESS_DOWNLOAD_MANAGER
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:39:5-82
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:39:22-79
+uses-permission#android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:40:5-88
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:40:22-85
+uses-permission#android.permission.EXPAND_STATUS_BAR
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:41:5-76
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:41:22-73
+permission#com.naran.weather.permission.JPUSH_MESSAGE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:43:5-45:47
+	android:protectionLevel
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:45:9-44
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:44:9-66
+uses-permission#com.naran.weather.permission.JPUSH_MESSAGE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:47:5-82
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:47:22-79
+uses-permission#android.permission.RECEIVE_USER_PRESENT
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:48:5-79
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:48:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:50:5-68
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:50:22-65
+uses-permission#android.permission.CAMERA
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:63:5-65
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:63:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:64:5-71
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:64:22-68
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:66:5-78
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:66:22-75
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:68:5-76
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:68:22-73
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:70:5-89
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:70:22-86
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:71:5-79
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:71:22-76
+uses-permission#android.permission.GET_TASKS
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:72:5-68
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:72:22-65
+application
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:74:5-135:19
+MERGED from [:mongolian-support] /Users/lishan/Desktop/xiangmu/Weather66666/mongolian-support/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-15:19
+MERGED from [:mongolian-support] /Users/lishan/Desktop/xiangmu/Weather66666/mongolian-support/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-15:19
+MERGED from [:aextreme] /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-18:19
+MERGED from [:aextreme] /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-18:19
+MERGED from [com.android.support:design:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/design-25.1.1.aar/dbf45c44dbef2bd7fd34951ad9c2453b/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:design:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/design-25.1.1.aar/dbf45c44dbef2bd7fd34951ad9c2453b/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.1.1.aar/697d9a169cf3680f3219d8b3ab1a5ea2/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.1.1.aar/697d9a169cf3680f3219d8b3ab1a5ea2/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:transition:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/transition-25.1.1.aar/58e497e25f238dc6e57697c5b9862553/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:transition:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/transition-25.1.1.aar/58e497e25f238dc6e57697c5b9862553/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-v4-25.1.1.aar/897b6f99ef74677ba02c4d32b74a46c6/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-v4-25.1.1.aar/897b6f99ef74677ba02c4d32b74a46c6/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/lishan/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3247cfd659ac53f6a08e0c96932c2bf8/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/lishan/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3247cfd659ac53f6a08e0c96932c2bf8/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.1.1.aar/e86d345089f3bf08e83c67d0da5542ad/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.1.1.aar/e86d345089f3bf08e83c67d0da5542ad/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.1.1.aar/3dd56666a67e1fd2cc908ed4a3b3d1d3/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.1.1.aar/3dd56666a67e1fd2cc908ed4a3b3d1d3/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-fragment-25.1.1.aar/71791f65d3a3eb9b10f8ed9139f51ff7/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-fragment-25.1.1.aar/71791f65d3a3eb9b10f8ed9139f51ff7/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.1.1.aar/ece0565a2332039fa6763b435a8e623b/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.1.1.aar/ece0565a2332039fa6763b435a8e623b/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.1.1.aar/36cef745e3bbc46f44a2e28fb1f75390/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.1.1.aar/36cef745e3bbc46f44a2e28fb1f75390/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.1.1.aar/685adc3e61df8bac381bc348dc9f9ed4/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.1.1.aar/685adc3e61df8bac381bc348dc9f9ed4/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-compat-25.1.1.aar/ea87acd488397aa69be24cf433610313/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-compat-25.1.1.aar/ea87acd488397aa69be24cf433610313/AndroidManifest.xml:25:5-20
+	android:supportsRtl
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:79:9-35
+	android:label
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:78:9-41
+	tools:ignore
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:81:9-48
+	android:icon
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:77:9-43
+	android:allowBackup
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:76:9-35
+	android:theme
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:80:9-40
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:75:9-57
+provider#android.support.v4.content.FileProvider
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:83:9-91:20
+	android:grantUriPermissions
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:87:13-47
+	android:authorities
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:85:13-78
+	android:exported
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:86:13-37
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:84:13-67
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:88:13-90:54
+	android:resource
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:90:17-51
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:89:17-67
+meta-data#com.baidu.lbsapi.API_KEY
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:93:9-95:64
+	android:value
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:95:13-61
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:94:13-52
+service#com.baidu.location.f
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:96:9-99:49
+	android:process
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:99:13-38
+	android:enabled
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:98:13-35
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:97:13-48
+activity#com.naran.ui.Act_Welcome
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:101:9-109:20
+	android:screenOrientation
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:103:13-49
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:102:13-52
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:104:13-108:29
+action#android.intent.action.MAIN
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:105:17-69
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:105:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:107:17-77
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:107:27-74
+activity#com.naran.ui.Act_Main
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:111:9-58
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:111:19-55
+activity#com.naran.ui.fgt.min.act.Act_SetUp
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:113:9-71
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:113:19-68
+activity#com.naran.ui.Act_Login
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:115:9-59
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:115:19-56
+activity#com.naran.ui.Act_Register
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:117:9-62
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:117:19-59
+activity#com.naran.ui.fgt.min.act.Act_LanguageSettings
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:119:9-82
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:119:19-79
+activity#com.naran.ui.fgt.min.act.Act_Favorite
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:121:9-74
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:121:19-71
+activity#com.naran.ui.fgt.home.act.Act_WebView
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:123:9-74
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:123:19-71
+activity#com.naran.ui.fgt.home.act.Act_ShowImage
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:125:9-76
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:125:19-73
+activity#com.naran.ui.fgt.home.act.Act_Route
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:127:9-72
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:127:19-69
+activity#com.naran.ui.addresmanager1.AddressManager1Activity
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:129:9-88
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:129:19-85
+activity#com.naran.ui.addresmanager1.AddAddress1Activity
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:131:9-84
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:131:19-81
+activity#com.naran.ui.addressmanager.AddressManagerActivity
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:133:9-87
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:133:19-84
+activity#com.naran.ui.addressmanager.AddAddressActivity
+ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:134:9-83
+	android:name
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml:134:19-80
+uses-sdk
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+MERGED from [:mongolian-support] /Users/lishan/Desktop/xiangmu/Weather66666/mongolian-support/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:mongolian-support] /Users/lishan/Desktop/xiangmu/Weather66666/mongolian-support/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:aextreme] /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:aextreme] /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/design-25.1.1.aar/dbf45c44dbef2bd7fd34951ad9c2453b/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/design-25.1.1.aar/dbf45c44dbef2bd7fd34951ad9c2453b/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.1.1.aar/697d9a169cf3680f3219d8b3ab1a5ea2/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.1.1.aar/697d9a169cf3680f3219d8b3ab1a5ea2/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:transition:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/transition-25.1.1.aar/58e497e25f238dc6e57697c5b9862553/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/transition-25.1.1.aar/58e497e25f238dc6e57697c5b9862553/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-v4-25.1.1.aar/897b6f99ef74677ba02c4d32b74a46c6/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-v4-25.1.1.aar/897b6f99ef74677ba02c4d32b74a46c6/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/lishan/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3247cfd659ac53f6a08e0c96932c2bf8/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/lishan/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/3247cfd659ac53f6a08e0c96932c2bf8/AndroidManifest.xml:5:5-7:41
+MERGED from [net.soulwolf.widget:ratiolayout:2.1.0] /Users/lishan/.gradle/caches/transforms-1/files-1.1/ratiolayout-2.1.0.aar/0f56c4604f47e772bf056a226db4c142/AndroidManifest.xml:8:5-10:41
+MERGED from [net.soulwolf.widget:ratiolayout:2.1.0] /Users/lishan/.gradle/caches/transforms-1/files-1.1/ratiolayout-2.1.0.aar/0f56c4604f47e772bf056a226db4c142/AndroidManifest.xml:8:5-10:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/19356e7a5bb3cde1188a471d2960504a/AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/19356e7a5bb3cde1188a471d2960504a/AndroidManifest.xml:19:5-43
+MERGED from [top.zibin:Luban:1.1.8] /Users/lishan/.gradle/caches/transforms-1/files-1.1/Luban-1.1.8.aar/7f8fc8e81e66a1a470ff622ede84d540/AndroidManifest.xml:7:5-9:41
+MERGED from [top.zibin:Luban:1.1.8] /Users/lishan/.gradle/caches/transforms-1/files-1.1/Luban-1.1.8.aar/7f8fc8e81e66a1a470ff622ede84d540/AndroidManifest.xml:7:5-9:41
+MERGED from [com.makeramen:roundedimageview:2.3.0] /Users/lishan/.gradle/caches/transforms-1/files-1.1/roundedimageview-2.3.0.aar/aeb32e0cfd7a80e093f41637200d8735/AndroidManifest.xml:7:5-43
+MERGED from [com.makeramen:roundedimageview:2.3.0] /Users/lishan/.gradle/caches/transforms-1/files-1.1/roundedimageview-2.3.0.aar/aeb32e0cfd7a80e093f41637200d8735/AndroidManifest.xml:7:5-43
+MERGED from [com.bigkoo:svprogresshud:1.0.6] /Users/lishan/.gradle/caches/transforms-1/files-1.1/svprogresshud-1.0.6.aar/b7182c8bcb5f8581b67e6cea68440533/AndroidManifest.xml:7:5-9:41
+MERGED from [com.bigkoo:svprogresshud:1.0.6] /Users/lishan/.gradle/caches/transforms-1/files-1.1/svprogresshud-1.0.6.aar/b7182c8bcb5f8581b67e6cea68440533/AndroidManifest.xml:7:5-9:41
+MERGED from [com.yanzhenjie:recyclerview-swipe:1.2.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/recyclerview-swipe-1.2.1.aar/0057df4ea915647d4a42d44d15783ad0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.yanzhenjie:recyclerview-swipe:1.2.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/recyclerview-swipe-1.2.1.aar/0057df4ea915647d4a42d44d15783ad0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.1.1.aar/e86d345089f3bf08e83c67d0da5542ad/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-25.1.1.aar/e86d345089f3bf08e83c67d0da5542ad/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.1.1.aar/3dd56666a67e1fd2cc908ed4a3b3d1d3/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-25.1.1.aar/3dd56666a67e1fd2cc908ed4a3b3d1d3/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.1.1.aar/c5e973c16aaf8a66f93838f74694f516/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-25.1.1.aar/c5e973c16aaf8a66f93838f74694f516/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-fragment-25.1.1.aar/71791f65d3a3eb9b10f8ed9139f51ff7/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-fragment-25.1.1.aar/71791f65d3a3eb9b10f8ed9139f51ff7/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.1.1.aar/ece0565a2332039fa6763b435a8e623b/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.1.1.aar/ece0565a2332039fa6763b435a8e623b/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.1.1.aar/36cef745e3bbc46f44a2e28fb1f75390/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.1.1.aar/36cef745e3bbc46f44a2e28fb1f75390/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.1.1.aar/685adc3e61df8bac381bc348dc9f9ed4/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.1.1.aar/685adc3e61df8bac381bc348dc9f9ed4/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-compat-25.1.1.aar/ea87acd488397aa69be24cf433610313/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/support-compat-25.1.1.aar/ea87acd488397aa69be24cf433610313/AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.1.1] /Users/lishan/.gradle/caches/transforms-1/files-1.1/design-25.1.1.aar/dbf45c44dbef2bd7fd34951ad9c2453b/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+		ADDED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/lishan/Desktop/xiangmu/Weather66666/app/src/main/AndroidManifest.xml
+activity#com.lykj.aextreme.afinal.libzxing.activity.CaptureActivity
+ADDED from [:aextreme] /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-95
+	android:name
+		ADDED from [:aextreme] /Users/lishan/Desktop/xiangmu/Weather66666/aextreme/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:19-92

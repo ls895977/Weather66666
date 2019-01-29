@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/lishan/Desktop/xiangmu/Weather66666/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
+            "map": [
+                {
+                    "source": "/Users/lishan/.gradle/caches/transforms-1/files-1.1/recyclerview-swipe-1.2.1.aar/0057df4ea915647d4a42d44d15783ad0/res/values-zh/values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,121,182,248,322",
+                        "endColumns": "65,60,65,73,59",
+                        "endOffsets": "116,177,243,317,377"
+                    }
+                }
+            ]
+        }
+    ]
+}
