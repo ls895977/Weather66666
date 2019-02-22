@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.1"
     defaultConfig {
         applicationId "com.naran.weather"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 25
         versionCode 62
         versionName "1.9.2"
@@ -21,6 +21,12 @@ android {
                 JPUSH_APPKEY : "70d105a23b70b657af10528b", //JPush上注册的包名对应的appkey.
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
     }
     buildTypes {
         release {
