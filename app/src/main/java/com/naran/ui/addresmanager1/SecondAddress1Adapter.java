@@ -11,10 +11,11 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.lykj.aextreme.afinal.utils.Debug;
 import com.naran.ui.addressmanager.OnAddressClickTask;
-import com.naran.ui.view.GifView;
 import com.naran.weather.R;
 
 import java.util.List;
+
+import pl.droidsonroids.gif.GifImageView;
 
 /**
  * Created by darhandarhad on 2018/12/23.
@@ -30,20 +31,23 @@ public class SecondAddress1Adapter extends
         public TextView mTextView;
         public TextView tvOther;
         public TextView tvTempercher;
-        public ImageView gifView;
+        public GifImageView gifView;
+
         public ViewHolder(View v) {
             super(v);
             mTextView = (TextView) v.findViewById(R.id.title);
-            tvOther = (TextView)v.findViewById(R.id.content);
-            tvTempercher = (TextView)v.findViewById(R.id.tempercher);
-            gifView = (ImageView) v.findViewById(R.id.gifView);
+            tvOther = (TextView) v.findViewById(R.id.content);
+            tvTempercher = (TextView) v.findViewById(R.id.tempercher);
+            gifView = (GifImageView) v.findViewById(R.id.gifView);
         }
     }
+
     public SecondAddress1Adapter(List<com.naran.ui.addressmanager.TextArticleTitle> titleAndUrls, Context context, int tag) {
         this.textArticleTitles = titleAndUrls;
         this.context = context;
         this.tag = tag;
     }
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                       int viewType) {
@@ -67,24 +71,26 @@ public class SecondAddress1Adapter extends
             ((ViewHolder) holder).tvOther
                     .setText(textArticleTitles.get(position).getWeatherPhenomenon());
             ((ViewHolder) holder).tvTempercher
-                    .setText(textArticleTitles.get(position).getCurrentTemperature()+"℃");
-            Glide.with(context).load(getImageResourceId("g" + textArticleTitles.get(position).getWeatherPhenomenonID())).into(((ViewHolder) holder).gifView);
+                    .setText(textArticleTitles.get(position).getCurrentTemperature() + "℃");
+            ((ViewHolder) holder).gifView.setBackgroundResource(getImageResourceId("g" + textArticleTitles.get(position).getWeatherPhenomenonID()));
+//            Glide.with(context).load(getImageResourceId("g" + textArticleTitles.get(position).getWeatherPhenomenonID())).into(((ViewHolder) holder).gifView);
             ((ViewHolder) holder).gifView
                     .setOnClickListener(new View.OnClickListener() {
 
                         @Override
                         public void onClick(View arg0) {
                             // TODO Auto-generated method stub
-                            if(context.getClass().equals(AddressManager1Activity.class)){
-                                OnAddressClickTask.getInstance().fireMsg(-1,textArticleTitles.get(position));
-                            }else if (context.getClass().equals(AddAddress1Activity.class)){
-                                OnAddressClickTask.getInstance().fireMsg(tag,textArticleTitles.get(position));
+                            if (context.getClass().equals(AddressManager1Activity.class)) {
+                                OnAddressClickTask.getInstance().fireMsg(-1, textArticleTitles.get(position));
+                            } else if (context.getClass().equals(AddAddress1Activity.class)) {
+                                OnAddressClickTask.getInstance().fireMsg(tag, textArticleTitles.get(position));
                             }
                         }
                     });
 
         }
     }
+
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
@@ -96,6 +102,7 @@ public class SecondAddress1Adapter extends
         // TODO Auto-generated method stub
         return 0;
     }
+
     public int getImageResourceId(String name) {
         R.drawable drawables = new R.drawable();
         //默认的id

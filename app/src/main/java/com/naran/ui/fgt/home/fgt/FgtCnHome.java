@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
 import com.bumptech.glide.Glide;
+import com.cunoraz.gifview.library.GifView;
 import com.lykj.aextreme.afinal.utils.Debug;
 import com.naran.ui.Act_Login;
 import com.naran.ui.addresmanager1.AddressChangeListener;
@@ -42,7 +43,6 @@ import com.naran.ui.modle.WeekWeatherModel_Chinese;
 import com.naran.ui.modle.WranAndServiceModel;
 import com.naran.ui.utils.LoginUtil;
 import com.naran.ui.view.CnArticalView5;
-import com.naran.ui.view.GifView;
 import com.naran.ui.view.MnTextView;
 import com.naran.ui.view.NaranButton;
 import com.naran.ui.view.RealChineseTimeWeather;
@@ -65,9 +65,10 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import pl.droidsonroids.gif.GifImageView;
 
 public class FgtCnHome extends BaseFgt implements AddressChangeListener {
-    private GifView gifView;
+    private GifImageView gifView;
     private Map<String, String> map = new HashMap<>();
     private List<AreaModel> areaModels;
     List<WranAndServiceModel> wranAndServiceModels;
@@ -126,7 +127,18 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
 
     @Override
     public void onViewClick(View v) {
-
+        switch (v.getId()) {
+            case R.id.location:
+            case R.id.address:
+                if (!LoginUtil.getInstance().isLogined) {
+                    Intent intent = new Intent();
+                    intent.putExtra("status", "home");
+                    startAct(intent, Act_Login.class);
+                } else {
+                    startAct(AddressManager1Activity.class);
+                }
+                break;
+        }
     }
 
     public void initViews() {
@@ -153,11 +165,12 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
         iFilter.addAction(SDKInitializer.SDK_BROADCAST_ACTION_STRING_NETWORK_ERROR);
         areaModels = new ArrayList<>();
         OkHttpUtil.getInstance();
-        address = getView(R.id.address);
+        address = getViewAndClick(R.id.address);
         OkHttpUtil.getAsync(OkHttpUtil.AGetAllAreaOne, new OkHttpUtil.DataCallBack() {
             public void requestFailure(Request request, IOException e) {
                 Toast.makeText(getContext(), "获取地区数据失败！", Toast.LENGTH_SHORT).show();
             }
+
             public void requestSuccess(String result) throws Exception {
                 List<AreaModel> areaModels = new ArrayList<AreaModel>();
                 JSONObject jsonObject = new JSONObject(result);
@@ -200,7 +213,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
         });
         btnMap = getView(R.id.mapBtn);
         baseLayout = getView(R.id.baseLayout);
-        btnLocation = getView(R.id.location);
+        btnLocation = getViewAndClick(R.id.location);
         baseContentLayout = getView(R.id.baseContentLayout);
         weekLayout = getView(R.id.realWeatherLayout);
         btnMap.setOnClickListener(new View.OnClickListener() {
@@ -230,7 +243,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
                         if (i == 0) {
                             textAndImageView.imgUrl1 = jobj.optString("ImgUrl");
                             textAndImageView.getTvFirs().setText(jobj.optString("ChinaContent"));
-                            Glide.with(getContext()).load(textAndImageView.imgUrl1).into(textAndImageView.getImgFirst());
+                            Glide.with(getContext()).load(textAndImageView.imgUrl1).asGif().into(textAndImageView.getImgFirst());
                         }
                         if (i == 1) {
                             textAndImageView.getTvSecond().setText(jobj.optString("ChinaContent"));
@@ -309,30 +322,30 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
         weekLayout = getView(R.id.weekWeatherLayout);
         weekWeather = new WeekChineseWeather(getContext());
         weekLayout.addView(weekWeather);
-        btnLocation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!LoginUtil.getInstance().isLogined) {
-                    Intent intent = new Intent();
-                    intent.putExtra("status", "home");
-                    startAct(intent, Act_Login.class);
-                } else {
-                    startAct(AddressManager1Activity.class);
-                }
-            }
-        });
-        address.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!LoginUtil.getInstance().isLogined) {
-                    Intent intent = new Intent();
-                    intent.putExtra("status", "home");
-                    startAct(intent, Act_Login.class);
-                } else {
-                    startAct(AddressManager1Activity.class);
-                }
-            }
-        });
+//        btnLocation.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (!LoginUtil.getInstance().isLogined) {
+//                    Intent intent = new Intent();
+//                    intent.putExtra("status", "home");
+//                    startAct(intent, Act_Login.class);
+//                } else {
+//                    startAct(AddressManager1Activity.class);
+//                }
+//            }
+//        });
+//        address.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (!LoginUtil.getInstance().isLogined) {
+//                    Intent intent = new Intent();
+//                    intent.putExtra("status", "home");
+//                    startAct(intent, Act_Login.class);
+//                } else {
+//                    startAct(AddressManager1Activity.class);
+//                }
+//            }
+//        });
     }
 
     private void initWeatherView() {
@@ -397,7 +410,6 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
     }
 
     private void saveArea(String areaNO, String areaName) {
-
         SharedPreferences sp = getActivity().getSharedPreferences("area1", Context.MODE_PRIVATE);
         sp.edit().putString("AreaNO", areaNO).putString("areaName", areaName).commit();
     }
@@ -432,7 +444,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
 
             @Override
             public void requestSuccess(String result) throws Exception {
-                Log.e("aa","-----更新后----"+result);
+                Log.e("aa", "-----更新后----" + result);
                 JSONObject jsonObject = new JSONObject(result);
                 JSONArray jsonArray = jsonObject.optJSONArray("data");
                 JSONObject modelObject = jsonArray.optJSONObject(0);
@@ -440,9 +452,9 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
                 dateTime.setText(modelObject.optString("ForecastTime"));
                 int isDay = modelObject.optInt("IsDay");
                 if (isDay == 0) {
-                    gifView.setGifResource(getImageResourceId("g" + modelObject.optString("WeatherPhenomenonID")));
+                    gifView.setBackgroundResource(getImageResourceId("g" + modelObject.optString("WeatherPhenomenonID")));
                 } else {
-                    gifView.setGifResource(getImageResourceId("wg" + modelObject.optString("WeatherPhenomenonID")));
+                    gifView.setBackgroundResource(getImageResourceId("wg" + modelObject.optString("WeatherPhenomenonID")));
                 }
                 ViewTreeObserver viewTreeObserver = gifView.getViewTreeObserver();
                 viewTreeObserver.addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
@@ -593,6 +605,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
             public void requestFailure(Request request, IOException e) {
                 Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
             }
+
             public void requestSuccess(String result) throws Exception {
                 JSONObject jsonObject = new JSONObject(result);
                 JSONArray dataArray = jsonObject.optJSONArray("data");

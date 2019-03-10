@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
+import com.cunoraz.gifview.library.GifView;
 import com.naran.ui.Act_Login;
 import com.naran.ui.addressmanager.AddressManagerActivity;
 import com.naran.ui.addressmanager.OnAddressClickListener;
@@ -40,7 +41,6 @@ import com.naran.ui.modle.WarnListInfoModel;
 import com.naran.ui.modle.WeekWeatherModel;
 import com.naran.ui.modle.WranAndServiceModel;
 import com.naran.ui.utils.LoginUtil;
-import com.naran.ui.view.GifView;
 import com.naran.ui.view.MnArticalView8;
 import com.naran.ui.view.MnTextView;
 import com.naran.ui.view.NaranButton;

@@ -7,8 +7,8 @@ android {
         applicationId "com.naran.weather"
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 62
-        versionName "1.9.2"
+        versionCode 68
+        versionName "1.9.8"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk {
             //选择要添加的对应cpu类型的.so库。
@@ -84,4 +84,7 @@ dependencies {
     compile 'com.bigkoo:svprogresshud:1.0.6'
     compile 'com.google.code.gson:gson:2.8.5'
     compile 'com.yanzhenjie:recyclerview-swipe:1.2.1'
+    compile 'top.zibin:Luban:1.1.8'
+    compile 'com.github.Cutta:GifView:1.1'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.1'
 }

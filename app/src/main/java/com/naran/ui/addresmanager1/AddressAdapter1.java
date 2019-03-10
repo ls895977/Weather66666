@@ -14,12 +14,14 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.cunoraz.gifview.library.GifView;
 import com.lykj.aextreme.afinal.utils.Debug;
 import com.naran.ui.addressmanager.TextArticleTitle;
-import com.naran.ui.view.GifView;
 import com.naran.weather.R;
 
 import java.util.List;
+
+import pl.droidsonroids.gif.GifImageView;
 
 /**
  * Created by darhandarhad on 2018/12/23.
@@ -33,11 +35,11 @@ public class AddressAdapter1 extends RecyclerView.Adapter<RecyclerView.ViewHolde
         public TextView mTextView;
         public TextView tempercher;
         public TextView content;
-        public ImageView gifView;
+        public GifImageView gifView;
         public RelativeLayout itemViewItem;
         public ViewHolder(View v) {
             super(v);
-            gifView = (ImageView) v.findViewById(R.id.gif_gif);
+            gifView = (GifImageView) v.findViewById(R.id.gif_gif);
             mTextView = (TextView) v.findViewById(R.id.title);
             tempercher = (TextView) v.findViewById(R.id.tempercher);
             content = (TextView) v.findViewById(R.id.content);
@@ -75,9 +77,12 @@ public class AddressAdapter1 extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     AddressChangeTask.getInstance().fireMsg(0, textArticleTitles.get(position));
                 }
             });
-            Glide.with(context)
-                    .load(getImageResourceId("g" + textArticleTitles.get(position).getWeatherPhenomenonID()))
-                    .into(((AddressAdapter1.ViewHolder) holder).gifView);
+            ((ViewHolder) holder).gifView.setBackgroundResource(getImageResourceId("g" + textArticleTitles.get(position).getWeatherPhenomenonID()));
+//            Glide.with(context)
+//                    .load(getImageResourceId("g" + textArticleTitles.get(position).getWeatherPhenomenonID())).asGif()
+//                    .into(((AddressAdapter1.ViewHolder) holder).gifView);
+
+
         }
     }
 

@@ -99,7 +99,7 @@ public class Act_Route extends BaseAct {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.putExtra("imgUrl", "http://121.41.123.152:8088/weather/index.html?starts=" + start.getText().toString() + "&ends=" + end.getText().toString() + "&start=" + start.getText().toString() + "&end=" + end.getText().toString() + "&date=2017.11.02%2014:10&_cmpt");
+                intent.putExtra("imgUrl", "http://xlglqxtq.com:8088/weather/index.html?starts=" + start.getText().toString() + "&ends=" + end.getText().toString() + "&start=" + start.getText().toString() + "&end=" + end.getText().toString() + "&date=2017.11.02%2014:10&_cmpt");
                 intent.setClass(Act_Route.this, Act_WebView.class);
                 startActivity(intent);
             }

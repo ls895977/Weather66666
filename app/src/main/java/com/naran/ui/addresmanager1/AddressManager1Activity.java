@@ -66,7 +66,6 @@ public class AddressManager1Activity extends Activity implements AddressChangeLi
         initViews();
         getFirstData();
     }
-
     private void initViews() {
         btnAdd = (RelativeLayout) findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(new View.OnClickListener() {

@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.naran.ui.view.GifView;
 import com.naran.weather.R;
 import java.util.List;
 
@@ -27,13 +26,13 @@ public class SecondAddressAdapter extends
         public TextView mTextView;
         public TextView tvOther;
         public TextView tvTempercher;
-        public ImageView gifView;
+        public pl.droidsonroids.gif.GifImageView gifView;
         public ViewHolder(View v) {
             super(v);
             mTextView = (TextView) v.findViewById(R.id.title);
             tvOther = (TextView)v.findViewById(R.id.other);
             tvTempercher = (TextView)v.findViewById(R.id.tempercher);
-            gifView = (ImageView)v.findViewById(R.id.gifView);
+            gifView = (pl.droidsonroids.gif.GifImageView)v.findViewById(R.id.gifView);
         }
     }
 
@@ -69,7 +68,8 @@ public class SecondAddressAdapter extends
                     .setText(textArticleTitles.get(position).getWeatherPhenomenon());
             ((ViewHolder) holder).tvTempercher
                     .setText(textArticleTitles.get(position).getCurrentTemperature()+"℃");
-            Glide.with(context).load(getImageResourceId("g" + textArticleTitles.get(position).getWeatherPhenomenonID())).into(((ViewHolder) holder).gifView);
+            ((ViewHolder) holder).gifView.setBackgroundResource(getImageResourceId("g" + textArticleTitles.get(position).getWeatherPhenomenonID()));
+//            Glide.with(context).load(getImageResourceId("g" + textArticleTitles.get(position).getWeatherPhenomenonID())).into(((ViewHolder) holder).gifView);
             ((ViewHolder) holder).gifView
                     .setOnClickListener(new View.OnClickListener() {
 

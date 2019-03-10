@@ -11,7 +11,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.naran.ui.view.GifView;
 import com.naran.ui.view.MnTextView;
 import com.naran.weather.R;
 

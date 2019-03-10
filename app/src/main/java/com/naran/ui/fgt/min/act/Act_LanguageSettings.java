@@ -1,6 +1,7 @@
 package com.naran.ui.fgt.min.act;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -54,6 +55,7 @@ public class Act_LanguageSettings extends BaseAct {
             status = getIntent().getStringExtra("status");
         }
         getPremiss();
+        tvVersion.setText("Version:"+getVerName(this));
     }
 
     @Override
@@ -115,5 +117,21 @@ public class Act_LanguageSettings extends BaseAct {
                 }
             }
         }
+    }
+    /**
+     * 获取版本号名称
+     *
+     * @param context 上下文
+     * @return
+     */
+    public static String getVerName(Context context) {
+        String verName = "";
+        try {
+            verName = context.getPackageManager().
+                    getPackageInfo(context.getPackageName(), 0).versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return verName;
     }
 }

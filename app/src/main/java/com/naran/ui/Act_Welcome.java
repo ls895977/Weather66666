@@ -101,7 +101,6 @@ public class Act_Welcome extends BaseAct implements ViewPager.OnPageChangeListen
             } else if (aCache.getAsString("language").equals("cn")) {
                 ComantUtils.MyLanguage = false;
             }
-            postLogin();
             return;
         }
         for (int i = 0; i < views.size(); i++) {
@@ -194,9 +193,12 @@ public class Act_Welcome extends BaseAct implements ViewPager.OnPageChangeListen
     /**
      * 登录
      */
+    LoginBean bean;
+
     public void postLogin() {
         if (aCache.getAsString("UserName") == null) {//判断是否登录过
             startAct(Act_Main.class);
+            finish();
             return;
         }
         Map<String, String> map = new HashMap<>();
@@ -206,6 +208,7 @@ public class Act_Welcome extends BaseAct implements ViewPager.OnPageChangeListen
             @Override
             public void requestFailure(Request request, IOException e) {
                 startAct(Act_Main.class);
+                finish();
                 Toast.makeText(context, "连接失败!", Toast.LENGTH_SHORT).show();
             }
 
@@ -213,7 +216,7 @@ public class Act_Welcome extends BaseAct implements ViewPager.OnPageChangeListen
             public void requestSuccess(String result) throws Exception {
                 aCache.put("login", result);
                 Gson gson = new Gson();
-                LoginBean bean = gson.fromJson(result, LoginBean.class);
+                bean = gson.fromJson(result, LoginBean.class);
                 UserInfoModel userInfoModel = new UserInfoModel();
                 userInfoModel.setRoleID(bean.getData().get(0).getRoleID());
                 userInfoModel.setUserName(bean.getData().get(0).getUserName());
@@ -252,12 +255,12 @@ public class Act_Welcome extends BaseAct implements ViewPager.OnPageChangeListen
                 public void requestSuccess(String result) throws Exception {
                     int onLineVersionCode = Integer.parseInt(new JSONObject(result).optString("EditionNo"));
                     if (versionCode != -1 && onLineVersionCode > versionCode) {
-
                         //postNotification(new JSONObject(result).optString("DownloadUrl"));
                         dialog(new JSONObject(result).optString("DownloadUrl"));
 //                        UpdateManager updateManager = new UpdateManager(Main1Activity.this);
 //                        updateManager.showNoticeDialog(new JSONObject(result).optString("DownloadUrl"));
-
+                    } else {
+                        postLogin();
                     }
                 }
             });
@@ -288,6 +291,7 @@ public class Act_Welcome extends BaseAct implements ViewPager.OnPageChangeListen
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
+                postLogin();
             }
         });
         builder.create().show();

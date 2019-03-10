@@ -40,7 +40,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
-                                <com.naran.ui.view.GifView
+                                <com.cunoraz.gifview.library.GifView
                                     android:id="@+id/gifView"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent" />
