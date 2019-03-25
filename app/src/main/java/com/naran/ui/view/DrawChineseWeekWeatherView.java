@@ -226,11 +226,11 @@ public class DrawChineseWeekWeatherView extends View {
 //            canvas.drawText(this.weekWeatherModels.get(i).getWeatherPhenomenon(),xogomMarginLeft+Dp2Px(48), Dp2Px(140),paint);
             //温度
             canvas.drawText(this.weekWeatherModels.get(i).getLowTemperature() + "℃~" + this.weekWeatherModels.get(i).getHighTemperature() + "℃", xogomMarginLeft + Dp2Px(24), Dp2Px(142), paint);
-            int windMargin = 5;
+            int windMargin = 25;
             if (this.weekWeatherModels.get(i).getWindDirection().length() == 2) {
-                windMargin = 8;
+                windMargin = 28;
             }
-            canvas.drawText(this.weekWeatherModels.get(i).getWindDirection() + " " + this.weekWeatherModels.get(i).getWindSpeedStr() + "m/s", xogomMarginLeft + Dp2Px(windMargin), Dp2Px(195), paint);
+            canvas.drawText(this.weekWeatherModels.get(i).getWindDirection() + " " + this.weekWeatherModels.get(i).getWindSpeedStr(), xogomMarginLeft + Dp2Px(windMargin), Dp2Px(195), paint);
             xogomMarginLeft += baseDistance;
         }
     }
