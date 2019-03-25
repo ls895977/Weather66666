@@ -91,19 +91,6 @@ public class Act_LanguageSettings extends BaseAct {
                 break;
         }
     }
-
-    private void setLang(Locale locale) {
-        // 获得res资源对象
-        Resources resources = getResources();
-        // 获得设置对象
-        Configuration config = resources.getConfiguration();
-        // 获得屏幕参数：主要是分辨率，像素等。
-        DisplayMetrics dm = resources.getDisplayMetrics();
-        // 语言
-        config.locale = locale;
-        resources.updateConfiguration(config, dm);
-    }
-
     private void getPremiss() {
         if (Build.VERSION.SDK_INT >= 23) {
             int REQUEST_CODE_CONTACT = 101;

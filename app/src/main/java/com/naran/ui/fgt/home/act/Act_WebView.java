@@ -21,7 +21,7 @@ public class Act_WebView extends BaseAct {
     @Override
     public void initView() {
         hideHeader();
-        getViewAndClick(R.id.back);
+        setOnClickListener(R.id.back);
         webView = getView(R.id.webview);
         progressBar3 = getView(R.id.progressBar3);
     }

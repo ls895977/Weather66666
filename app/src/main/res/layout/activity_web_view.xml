@@ -14,8 +14,10 @@
             <com.naran.ui.view.NaranButton
                 android:id="@+id/back"
                 android:layout_width="wrap_content"
+                android:paddingTop="@dimen/dip_5"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:paddingLeft="@dimen/dip_10"
+                android:paddingRight="@dimen/dip_10"
                 android:text="H"
                 android:layout_marginTop="@dimen/dip_20"
                 android:textColor="@color/white"

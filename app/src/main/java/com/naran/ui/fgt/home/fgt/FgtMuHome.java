@@ -424,9 +424,8 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
             public void requestFailure(Request request, IOException e) {
                 Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
             }
-
             public void requestSuccess(String result) throws Exception {
-                List<AreaModel> areaModels = new ArrayList<AreaModel>();
+                List<AreaModel> areaModels = new ArrayList<>();
                 JSONObject jsonObject = new JSONObject(result);
                 JSONArray dataArray = jsonObject.optJSONArray("data");
                 // popupwindow

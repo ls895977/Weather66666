@@ -143,11 +143,11 @@ public class CnArticalView extends LinearLayout {
         public void updateDrawState(TextPaint ds) {
             ds.setUnderlineText(false);
         }
-
+        private String myUrl="http://xlglqxtq.com:8000/ViewInfo.aspx?ID=";
         @Override
         public void onClick(View widget) {
             Intent intent = new Intent(context, Act_WebView.class);
-            intent.putExtra("imgUrl", "http://121.41.123.152:8000/ViewInfo.aspx?ID=" + mId);
+            intent.putExtra("imgUrl", myUrl+ mId);
             context.startActivity(intent);
 //            Toast.makeText(mActivity, titleListTextView.getMeasuredWidth()+"", 1000).show();
         }

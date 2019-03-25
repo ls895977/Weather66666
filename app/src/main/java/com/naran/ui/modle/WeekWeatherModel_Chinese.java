@@ -15,10 +15,17 @@ public class WeekWeatherModel_Chinese {
     private int WindSpeedMS;
     private String ForecastDate;
     private String WeatherPhenomenonID;
+    private String WindSpeedStr;
 
+    public String getWindSpeedStr() {
+        return WindSpeedStr;
+    }
+
+    public void setWindSpeedStr(String windSpeedStr) {
+        WindSpeedStr = windSpeedStr;
+    }
 
     private String WeatherPhenomenon;
-
 
 
     public WeekWeatherModel_Chinese(JSONObject jsonObject) {
@@ -31,6 +38,7 @@ public class WeekWeatherModel_Chinese {
         this.ForecastDate = jsonObject.optString("ForecastDate");
         this.WeatherPhenomenonID = String.valueOf(jsonObject.optInt("WeatherPhenomenonID"));
         this.WeatherPhenomenon = jsonObject.optString("WeatherPhenomenon");
+        this.WindSpeedStr = jsonObject.optString("WindSpeedStr");
     }
 
     public String getWeatherPhenomenon() {
@@ -40,6 +48,7 @@ public class WeekWeatherModel_Chinese {
     public void setWeatherPhenomenon(String weatherPhenomenon) {
         WeatherPhenomenon = weatherPhenomenon;
     }
+
     public int getHighTemperature() {
         return HighTemperature;
     }

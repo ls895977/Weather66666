@@ -234,6 +234,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
 
             @Override
             public void requestSuccess(String result) throws Exception {
+
                 if (null != result) {
                     JSONObject jsonObject = new JSONObject(result);
                     JSONArray dataArray = jsonObject.optJSONArray("data");
@@ -420,7 +421,6 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
             public void requestFailure(Request request, IOException e) {
                 Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
             }
-
             public void requestSuccess(String result) throws Exception {
                 JSONObject jsonObject = new JSONObject(result);
                 JSONArray dataArray = jsonObject.optJSONArray("data");
@@ -444,7 +444,6 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
 
             @Override
             public void requestSuccess(String result) throws Exception {
-                Log.e("aa", "-----更新后----" + result);
                 JSONObject jsonObject = new JSONObject(result);
                 JSONArray jsonArray = jsonObject.optJSONArray("data");
                 JSONObject modelObject = jsonArray.optJSONObject(0);
@@ -574,7 +573,6 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
         map.put("AreaNO", AreaNO);
         address.setText(areaName);
     }
-
     @Override
     public void onAddressChange(int tag, final TextArticleTitle tat) {
         if (tag == 0) {
