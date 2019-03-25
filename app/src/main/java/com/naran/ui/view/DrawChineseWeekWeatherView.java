@@ -230,7 +230,7 @@ public class DrawChineseWeekWeatherView extends View {
             if (this.weekWeatherModels.get(i).getWindDirection().length() == 2) {
                 windMargin = 28;
             }
-            canvas.drawText(this.weekWeatherModels.get(i).getWindDirection() + " " + this.weekWeatherModels.get(i).getWindSpeedMS() + "m/s", xogomMarginLeft + Dp2Px(windMargin), Dp2Px(195), paint);
+            canvas.drawText(this.weekWeatherModels.get(i).getWindDirection() + " " + this.weekWeatherModels.get(i).getWindSpeed() + "m/s", xogomMarginLeft + Dp2Px(windMargin), Dp2Px(195), paint);
             xogomMarginLeft += baseDistance;
         }
     }

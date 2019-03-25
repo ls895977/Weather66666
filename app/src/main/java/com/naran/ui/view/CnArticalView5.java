@@ -92,7 +92,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(0).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(0).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -100,7 +100,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(0).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(0).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -113,7 +113,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(1).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(1).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -121,7 +121,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(1).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(1).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -135,7 +135,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(2).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(2).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -143,7 +143,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(2).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(2).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -157,7 +157,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(3).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(3).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -165,7 +165,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(3).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(3).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -179,7 +179,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(4).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(4).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -187,7 +187,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(4).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(4).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -200,7 +200,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(5).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(5).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -208,7 +208,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(5).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(5).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -221,7 +221,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(6).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(6).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -229,7 +229,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(6).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(6).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -242,7 +242,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(7).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(7).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
@@ -250,7 +250,7 @@ public class CnArticalView5 extends LinearLayout{
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context, Act_WebView.class);
-                        intent.putExtra("imgUrl","http://121.41.123.152:8000/ViewInfo.aspx?ID="+wranAndServiceModels.get(7).getWarningAndServiceID());
+                        intent.putExtra("imgUrl","http://xlglqxtq.com:8088/ViewInfo.aspx?ID="+wranAndServiceModels.get(7).getWarningAndServiceID());
                         context.startActivity(intent);
                     }
                 });
