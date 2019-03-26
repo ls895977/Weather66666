@@ -11,6 +11,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.lykj.aextreme.afinal.utils.Debug;
 import com.naran.ui.modle.WeekWeatherModel;
 import com.naran.weather.R;
 
@@ -88,7 +89,7 @@ public class DrawWeekWeatherView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        if(weekWeatherModels == null){
+        if (weekWeatherModels == null) {
             return;
         }
         int xogomMarginLeft = Dp2Px(8);
@@ -123,8 +124,8 @@ public class DrawWeekWeatherView extends View {
                 canvas.drawText("", Dp2Px(24), (baseDistance * (i - 1) + baseDistance / 2 - Dp2Px(20)) * -1, paint);
                 canvas.drawText("", Dp2Px(24), (baseDistance * (i - 1) + baseDistance / 2) * -1, paint);
                 Calendar c = Calendar.getInstance();
-                int way = c.get(Calendar.DAY_OF_WEEK) -1;//星期
-                canvas.drawText(garag.get(way+i-1), Dp2Px(24), (baseDistance * (i - 1) + baseDistance / 2 + Dp2Px(20)) * -1, paint);
+                int way = c.get(Calendar.DAY_OF_WEEK) - 1;//星期
+                canvas.drawText(garag.get(way + i - 1), Dp2Px(24), (baseDistance * (i - 1) + baseDistance / 2 + Dp2Px(20)) * -1, paint);
 
                 // 天气 第一个
                 int addLeftPoint = Dp2Px(-23);// 如果两行需要换行，剧中
@@ -173,13 +174,20 @@ public class DrawWeekWeatherView extends View {
                 if (scale > 2.0) {
                     addStartPoint = Dp2Px(25);
                 }
-                String winSeedMS = weekWeatherModels.get(i).getWindSpeedMS()+"m/s";
-                if(weekWeatherModels.get(i).getWindSpeedMS() == 0){
+                String winSeedMS = weekWeatherModels.get(i).getWindSpeedStr() ;
+//                if (weekWeatherModels.get(i).getWindSpeedStr() != null && !weekWeatherModels.get(i).getWindSpeedStr().equals("")) {
+//                    String m[] = weekWeatherModels.get(i).getWindSpeedStr().split("-");
+//                    int mmc = Integer.valueOf(m[0]);
+//                    String[] cc = m[1].split("\"");
+//                    Debug.e("-----------cc=="+weekWeatherModels.get(i).getWindSpeedStr());
+////                    int mmc1 = Integer.valueOf(cc[0]);
+////                    winSeedMS = mmc + " - " + mmc1;
+//                }
+                if (weekWeatherModels.get(i).getWindSpeedMS() == 0) {
                     winSeedMS = "";
                 }
-                canvas.drawText(weekWeatherModels.get(i).getWindDirection(), addStartPoint + textStartPoint + Dp2Px(240), (baseDistance / 4) * -1 - (i - 1) * baseDistance-Dp2Px(12), paint);
-                canvas.drawText(""+"  "+winSeedMS, addStartPoint + textStartPoint + Dp2Px(240), (baseDistance * (i - 1) + baseDistance / 2) * -1-Dp2Px(18), paint);
-
+                canvas.drawText(weekWeatherModels.get(i).getWindDirection(), addStartPoint + textStartPoint + Dp2Px(240), (baseDistance / 4) * -1 - (i - 1) * baseDistance - Dp2Px(12), paint);
+                canvas.drawText("" + "  " + winSeedMS, addStartPoint + textStartPoint + Dp2Px(240), (baseDistance * (i - 1) + baseDistance / 2) * -1 - Dp2Px(18), paint);
                 canvas.restore();
                 jump++;
             }
@@ -366,7 +374,7 @@ public class DrawWeekWeatherView extends View {
         tenger.clear();
         for (int k = 0; k < weekWeatherModels.size(); k++) {
             tenger.add(weekWeatherModels.get(k).getWeatherPhenomenon());
-            tenger.add("  "+weekWeatherModels.get(k).getAreaNO());
+            tenger.add("  " + weekWeatherModels.get(k).getAreaNO());
         }
         invalidate();
     }

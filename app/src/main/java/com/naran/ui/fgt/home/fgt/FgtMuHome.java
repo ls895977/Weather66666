@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
 import com.cunoraz.gifview.library.GifView;
+import com.lykj.aextreme.afinal.utils.Debug;
 import com.naran.ui.Act_Login;
 import com.naran.ui.addressmanager.AddressManagerActivity;
 import com.naran.ui.addressmanager.OnAddressClickListener;

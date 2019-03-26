@@ -16,6 +16,15 @@ public class WeekWeatherModel {
     private int WeatherPhenomenonID;
     private int WindSpeedMS;
     private String WindDirection;
+    private String WindSpeedStr;
+
+    public String getWindSpeedStr() {
+        return WindSpeedStr;
+    }
+
+    public void setWindSpeedStr(String windSpeedStr) {
+        WindSpeedStr = windSpeedStr;
+    }
 
     public WeekWeatherModel(JSONObject jsonObject){
 
@@ -28,6 +37,7 @@ public class WeekWeatherModel {
         this.WeatherPhenomenonID = jsonObject.optInt("WeatherPhenomenonID");
         this.WindSpeedMS = jsonObject.optInt("WindSpeedMS");
         this.WindDirection = jsonObject.optString("WindDirection");
+        this.WindSpeedStr=jsonObject.optString("WindSpeedStr");
     }
     public String getWindDirection() {
         return WindDirection;

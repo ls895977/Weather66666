@@ -86,6 +86,7 @@ public class Act_Welcome extends BaseAct implements ViewPager.OnPageChangeListen
             versionCode = packageInfo.versionCode;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
+            postLogin();
         }
         if (versionCode != -1) {
             String isFirstTime = shared.getString("firstTime", "");
@@ -194,7 +195,6 @@ public class Act_Welcome extends BaseAct implements ViewPager.OnPageChangeListen
      * 登录
      */
     LoginBean bean;
-
     public void postLogin() {
         if (aCache.getAsString("UserName") == null) {//判断是否登录过
             startAct(Act_Main.class);
@@ -265,6 +265,7 @@ public class Act_Welcome extends BaseAct implements ViewPager.OnPageChangeListen
                 }
             });
         } catch (PackageManager.NameNotFoundException e) {
+            postLogin();
             e.printStackTrace();
         }
     }

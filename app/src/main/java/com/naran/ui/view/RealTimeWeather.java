@@ -42,7 +42,6 @@ public class RealTimeWeather extends LinearLayout {
         linearLayout.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
         horizontalScrollView.addView(linearLayout);
-
         DrawTimeWeatherView drawTimeWeatherView = new DrawTimeWeatherView(context);
         linearLayout.addView(drawTimeWeatherView);
     }
