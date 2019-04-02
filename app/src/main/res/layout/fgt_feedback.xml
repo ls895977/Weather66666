@@ -15,18 +15,14 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dip_70"
-                android:background="@color/colorPrimary"
-                android:orientation="horizontal"
-                android:paddingTop="4dp">
-
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary">
                 <TextView
                     android:id="@+id/send"
                     android:layout_width="@dimen/dip_40"
                     android:layout_height="@dimen/dip_40"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginRight="10dp"
                     android:textColor="@color/white"
                     android:textSize="40dp" />
             </RelativeLayout>

@@ -192,7 +192,6 @@ public class Act_SetUp extends BaseAct implements Dlg_Photograph.OnClick {
      * 调起拍照
      */
     private File currentImageFile;
-
     public void camera() {
         File dir = new File(Environment.getExternalStorageDirectory(), "myimage");//在sd下创建文件夹myimage；Environment.getExternalStorageDirectory()得到SD卡路径文件
         if (!dir.exists()) {    //exists()判断文件是否存在，不存在则创建文件
