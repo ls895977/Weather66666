@@ -94,31 +94,21 @@ public class DrawWeekWeatherView extends View {
         }
         int xogomMarginLeft = Dp2Px(8);
         int jump = 0;
-
         for (int i = 0; i < 6; i++) {
-
             canvas.drawLine(xogomMarginLeft, Dp2Px(8), xogomMarginLeft, baseHeight - Dp2Px(3), paint);// 大分割竖线
-            // 天气分割线 小短线
-//            canvas.drawLine(xogomMarginLeft + baseDistance / 2, baseHeight - Dp2Px(355), xogomMarginLeft + baseDistance / 2, baseHeight - Dp2Px(160), paint);//
             if (i > 0) {
                 // 日期
                 canvas.drawText(this.weekWeatherModels.get(i - 1).getForecastDate(), baseDistance * (i - 1) + baseDistance / 2 - Dp2Px(30), Dp2Px(80), paint);// 日期
                 //温度
                 canvas.drawText(this.weekWeatherModels.get(i - 1).getLowTemperature() + "~" + this.weekWeatherModels.get(i - 1).getHighTemperature() + "℃", baseDistance * (i - 1) + baseDistance / 2 - Dp2Px(13), Dp2Px(295), paint);
-                //  图标
                 // 图标
                 String bitmapNameEdur = "w" + weekWeatherModels.get(i - 1).getWeatherPhenomenonID() + "";
                 Bitmap bitmap = BitmapFactory.decodeResource(this.getContext().getResources(), getImageResourceId(bitmapNameEdur));
                 Rect mDestRect = new Rect(baseDistance * (i - 1) + Dp2Px(28), Dp2Px(85), baseDistance * (i - 1) + Dp2Px(68), Dp2Px(125));
                 canvas.drawBitmap(bitmap, null, mDestRect, paint);
-                // 第二个图标
-//                Bitmap bitmap1 = BitmapFactory.decodeResource(this.getContext().getResources(), R.drawable.w0);
-//                Rect mDestRect1 = new Rect(baseDistance * (i - 1) + Dp2Px(15) + baseDistance / 2, Dp2Px(85), baseDistance * (i - 1) + Dp2Px(55) + baseDistance / 2, Dp2Px(125));
-//                canvas.drawBitmap(bitmap1, null, mDestRect1, paint);
             }
             canvas.save();
             canvas.rotate(90.0f);
-
             if (i > 0) {
                 // 星期
                 canvas.drawText("", Dp2Px(24), (baseDistance * (i - 1) + baseDistance / 2 - Dp2Px(20)) * -1, paint);
@@ -126,10 +116,8 @@ public class DrawWeekWeatherView extends View {
                 Calendar c = Calendar.getInstance();
                 int way = c.get(Calendar.DAY_OF_WEEK) - 1;//星期
                 canvas.drawText(garag.get(way + i - 1), Dp2Px(24), (baseDistance * (i - 1) + baseDistance / 2 + Dp2Px(20)) * -1, paint);
-
                 // 天气 第一个
                 int addLeftPoint = Dp2Px(-23);// 如果两行需要换行，剧中
-
                 String[] split1 = tenger.get(i - 1 + jump).split(" ");
                 float scale = getResources().getDisplayMetrics().density;
                 if (scale < 2.0) {
@@ -141,6 +129,12 @@ public class DrawWeekWeatherView extends View {
                 }
                 if (split1.length > 3) {
                     addLeftPoint = Dp2Px(10);
+                    if (i == 3) {//两行
+                        baseDistance = Dp2Px(90);
+                    }
+                    if (i == 1) {
+                        baseDistance = Dp2Px(160);
+                    }
                     String str1 = split1[0] + " " + split1[1];
                     String str2 = "";
                     for (int j = 2; j < split1.length; j++) {
@@ -148,25 +142,10 @@ public class DrawWeekWeatherView extends View {
                     }
                     canvas.drawText(str1, Dp2Px(textStartPoint), addLeftPoint + (baseDistance / 4) * -1 - (i - 1) * baseDistance, paint);
                     canvas.drawText(str2, Dp2Px(textStartPoint), -addLeftPoint + (baseDistance / 4) * -1 - (i - 1) * baseDistance, paint);
+                    baseDistance = Dp2Px(80);
                 } else {
                     canvas.drawText(tenger.get(i - 1 + jump), Dp2Px(textStartPoint), addLeftPoint + (baseDistance / 4) * -1 - (i - 1) * baseDistance, paint);
                 }
-                // 天气 第2个
-
-//                String[] split2 = tenger.get(i + jump).split(" ");
-//
-//                if (split2.length > 3) {
-//                    addLeftPoint = Dp2Px(10);
-//                    String str1 = split2[0] + " " + split2[1];
-//                    String str2 = "";
-//                    for (int j = 2; j < split2.length; j++) {
-//                        str2 += split2[j] + " ";
-//                    }
-//                    canvas.drawText(str1, Dp2Px(textStartPoint), addLeftPoint + (baseDistance / 4) * -3 - (i - 1) * baseDistance, paint);
-//                    canvas.drawText(str2, Dp2Px(textStartPoint), -addLeftPoint + (baseDistance / 4) * -3 - (i - 1) * baseDistance, paint);
-//                } else {
-//                    canvas.drawText(tenger.get(i + jump), Dp2Px(textStartPoint), (baseDistance / 4) * -3 - (i - 1) * baseDistance, paint);
-//                }
                 int addStartPoint = 0;
                 if (scale < 2.0) {
                     addStartPoint = -Dp2Px(25);
@@ -174,15 +153,7 @@ public class DrawWeekWeatherView extends View {
                 if (scale > 2.0) {
                     addStartPoint = Dp2Px(25);
                 }
-                String winSeedMS = weekWeatherModels.get(i).getWindSpeedStr() ;
-//                if (weekWeatherModels.get(i).getWindSpeedStr() != null && !weekWeatherModels.get(i).getWindSpeedStr().equals("")) {
-//                    String m[] = weekWeatherModels.get(i).getWindSpeedStr().split("-");
-//                    int mmc = Integer.valueOf(m[0]);
-//                    String[] cc = m[1].split("\"");
-//                    Debug.e("-----------cc=="+weekWeatherModels.get(i).getWindSpeedStr());
-////                    int mmc1 = Integer.valueOf(cc[0]);
-////                    winSeedMS = mmc + " - " + mmc1;
-//                }
+                String winSeedMS = weekWeatherModels.get(i).getWindSpeedStr();
                 if (weekWeatherModels.get(i).getWindSpeedMS() == 0) {
                     winSeedMS = "";
                 }
@@ -191,12 +162,10 @@ public class DrawWeekWeatherView extends View {
                 canvas.restore();
                 jump++;
             }
-
             canvas.restore();
             canvas.save();
             xogomMarginLeft += baseDistance;
         }
-//        canvas.drawLine(xogomMarginLeft+baseDistance,10,xogomMarginLeft+baseDistance,Dp2Px(baseHeight-1),paint);
         canvas.drawLine(Dp2Px(8), baseHeight - Dp2Px(355), baseDistance * 5 + Dp2Px(8), baseHeight - Dp2Px(355), paint);//天气上面的
         canvas.drawLine(Dp2Px(8), baseHeight - Dp2Px(160), baseDistance * 5 + Dp2Px(8), baseHeight - Dp2Px(160), paint); // 温度上面的
         canvas.drawLine(Dp2Px(8), baseHeight - Dp2Px(140), baseDistance * 5 + Dp2Px(8), baseHeight - Dp2Px(140), paint); // 温度下面的
@@ -369,7 +338,6 @@ public class DrawWeekWeatherView extends View {
     }
 
     public void setDatas(List<WeekWeatherModel> weekWeatherModels) {
-
         this.weekWeatherModels = weekWeatherModels;
         tenger.clear();
         for (int k = 0; k < weekWeatherModels.size(); k++) {

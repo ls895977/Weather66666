@@ -37,7 +37,6 @@ public class WeekWeather extends LinearLayout {
         init();
     }
     private void init(){
-
         // 左右滾動的東西
         horizontalScrollView = new HorizontalScrollView(context);
         horizontalScrollView.setHorizontalScrollBarEnabled(false);
