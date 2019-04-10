@@ -106,6 +106,12 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
 
     @Override
     public void initData() {
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
         handler = new Handler();
         initViews();
         getArea();
@@ -170,7 +176,6 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
             public void requestFailure(Request request, IOException e) {
                 Toast.makeText(getContext(), "获取地区数据失败！", Toast.LENGTH_SHORT).show();
             }
-
             public void requestSuccess(String result) throws Exception {
                 List<AreaModel> areaModels = new ArrayList<AreaModel>();
                 JSONObject jsonObject = new JSONObject(result);
@@ -178,6 +183,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
                 // popupwindow
                 final View popupView = getActivity().getLayoutInflater().inflate(R.layout.view_area_popup, null);
                 LinearLayout popupLayout = (LinearLayout) popupView.findViewById(R.id.popupLayout);
+                popupLayout.removeAllViews();
                 for (int i = 0; i < dataArray.length(); i++) {
                     final AreaModel areaModel = new AreaModel(dataArray.optJSONObject(i));
                     areaModels.add(areaModel);
@@ -313,6 +319,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
                             });
                         }
                     }
+                    majorWeatherLayout.removeAllViews();
                     majorWeatherLayout.addView(textAndImageView);
                 } else {
                     majorWeatherLayout.setVisibility(View.GONE);
@@ -322,6 +329,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
         });
         weekLayout = getView(R.id.weekWeatherLayout);
         weekWeather = new WeekChineseWeather(getContext());
+        weekLayout.removeAllViews();
         weekLayout.addView(weekWeather);
 //        btnLocation.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -351,6 +359,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
 
     private void initWeatherView() {
         RealChineseTimeWeather realTimeWeather = new RealChineseTimeWeather(getContext());
+        weekLayout.removeAllViews();
         weekLayout.addView(realTimeWeather);
     }
 
@@ -374,6 +383,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
                 // popupwindow
                 View popupView = getActivity().getLayoutInflater().inflate(R.layout.view_area_popup, null);
                 LinearLayout popupLayout = (LinearLayout) popupView.findViewById(R.id.popupLayout);
+                popupLayout.removeAllViews();
                 for (int i = 0; i < dataArray.length(); i++) {
                     final AreaModel areaModel = new AreaModel(dataArray.optJSONObject(i));
                     areaModels.add(areaModel);
@@ -616,6 +626,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
                 CnArticalView5 cnArticalView5 = new CnArticalView5(getContext());
                 cnArticalView5.setLayoutParams(lp);
                 cnArticalView5.setData(wranAndServiceModels);
+                articalLayout.removeAllViews();
                 articalLayout.addView(cnArticalView5);
             }
         });

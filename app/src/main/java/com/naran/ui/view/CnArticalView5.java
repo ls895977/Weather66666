@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -80,7 +81,6 @@ public class CnArticalView5 extends LinearLayout{
     }
     private String myUrl="http://xlglqxtq.com:8000/ViewInfo.aspx?ID=";
     public void setData(final List<WranAndServiceModel> wranAndServiceModels){
-
         for(int i=0;i<wranAndServiceModels.size();i++){
 
 

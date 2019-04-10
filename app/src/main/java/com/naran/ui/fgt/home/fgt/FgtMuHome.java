@@ -97,7 +97,6 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
     private Handler handler;
     private List<String> maljilQagOor;
     private List<ArticalModel> articalModels;
-
     @Override
     public int initLayoutId() {
         return R.layout.view_mu_home;
@@ -105,6 +104,12 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
 
     @Override
     public void initView() {
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
         handler = new Handler();
         hideHeader();
         initViews();
@@ -198,6 +203,7 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
                             getSecoundAddress(areaModel.getAreaID() + "");
                         }
                     });
+                    popupLayout.removeAllViews();
                     popupLayout.addView(mnTextView);
                 }
                 mPopupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
@@ -242,6 +248,7 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
                 mnArticalView8.setLayoutParams(lp);
                 mnArticalView8.setData(wranAndServiceModels);
                 articalLayout = getView(R.id.articalLayout);
+                articalLayout.removeAllViews();
                 articalLayout.addView(mnArticalView8);
             }
         });
@@ -432,6 +439,7 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
                 // popupwindow
                 View popupView = getActivity().getLayoutInflater().inflate(R.layout.view_area_popup, null);
                 LinearLayout popupLayout = (LinearLayout) popupView.findViewById(R.id.popupLayout);
+                popupLayout.removeAllViews();
                 for (int i = 0; i < dataArray.length(); i++) {
                     final AreaModel areaModel = new AreaModel(dataArray.optJSONObject(i));
                     areaModels.add(areaModel);
@@ -640,6 +648,7 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
 
     private void initWeatherView() {
         RealTimeWeather realTimeWeather = new RealTimeWeather(getContext());
+        weekLayout.removeAllViews();
         weekLayout.addView(realTimeWeather);
     }
 
