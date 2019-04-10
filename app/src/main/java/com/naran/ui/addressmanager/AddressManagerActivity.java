@@ -83,7 +83,6 @@ public class AddressManagerActivity extends Activity implements OnAddressClickLi
             public void requestFailure(Request request, IOException e) {
                 Toast.makeText(AddressManagerActivity.this, "获取地区数据失败！", Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void requestSuccess(String result) throws Exception {
                 JSONObject jsonObject = new JSONObject(result);

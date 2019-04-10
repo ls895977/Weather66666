@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.baidu.mapapi.SDKInitializer;
 import com.bumptech.glide.Glide;
 import com.cunoraz.gifview.library.GifView;
+import com.lykj.aextreme.afinal.utils.ACache;
 import com.lykj.aextreme.afinal.utils.Debug;
 import com.naran.ui.Act_Login;
 import com.naran.ui.addresmanager1.AddressChangeListener;
@@ -104,9 +105,11 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
         AddressChangeTask.getInstance().addOnAddressChangeListener(this);
     }
 
+    private ACache aCache;
+
     @Override
     public void initData() {
-
+        aCache = ACache.get(context);
     }
 
     @Override
@@ -119,6 +122,16 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
         map.put("TimeNumber", "1");
         getWeekDatas();
         getWarnAndServiceByCondition();
+        if (aCache.getAsString("AreaNO") != null) {
+            map.clear();
+            map.put("AreaNO", aCache.getAsString("AreaNO"));
+            map.put("type", "cn_word");
+            getRealTimeWeek();
+            getWeekDatas();
+            map.clear();
+            getRealTimeWeek();
+            getWeekDatas();
+        }
     }
 
     @Override
@@ -176,6 +189,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
             public void requestFailure(Request request, IOException e) {
                 Toast.makeText(getContext(), "获取地区数据失败！", Toast.LENGTH_SHORT).show();
             }
+
             public void requestSuccess(String result) throws Exception {
                 List<AreaModel> areaModels = new ArrayList<AreaModel>();
                 JSONObject jsonObject = new JSONObject(result);
@@ -237,20 +251,19 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
             public void requestFailure(Request request, IOException e) {
                 Toast.makeText(getContext(), "未能获取专业服务信息", Toast.LENGTH_SHORT).show();
             }
-
             @Override
             public void requestSuccess(String result) throws Exception {
-
                 if (null != result) {
                     JSONObject jsonObject = new JSONObject(result);
                     JSONArray dataArray = jsonObject.optJSONArray("data");
                     for (int i = 0; i < dataArray.length(); i++) {
-
                         JSONObject jobj = dataArray.optJSONObject(i);
                         if (i == 0) {
                             textAndImageView.imgUrl1 = jobj.optString("ImgUrl");
                             textAndImageView.getTvFirs().setText(jobj.optString("ChinaContent"));
-                            Glide.with(getContext()).load(textAndImageView.imgUrl1).asGif().into(textAndImageView.getImgFirst());
+                            Glide.with(getContext()).load(textAndImageView.imgUrl1)
+                                    .placeholder(R.mipmap.voice_too_short)
+                                    .into(textAndImageView.getImgFirst());
                         }
                         if (i == 1) {
                             textAndImageView.getTvSecond().setText(jobj.optString("ChinaContent"));
@@ -431,6 +444,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
             public void requestFailure(Request request, IOException e) {
                 Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
             }
+
             public void requestSuccess(String result) throws Exception {
                 JSONObject jsonObject = new JSONObject(result);
                 JSONArray dataArray = jsonObject.optJSONArray("data");
@@ -583,8 +597,16 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
         map.put("AreaNO", AreaNO);
         address.setText(areaName);
     }
+
+    /**
+     * 选中天气情况更新信息
+     *
+     * @param tag
+     * @param tat
+     */
     @Override
     public void onAddressChange(int tag, final TextArticleTitle tat) {
+        aCache.put("AreaNO", tat.getAreaOn());
         if (tag == 0) {
             handler.post(new Runnable() {
                 @Override
@@ -596,6 +618,7 @@ public class FgtCnHome extends BaseFgt implements AddressChangeListener {
     }
 
     private void updateWeather(TextArticleTitle textArticleTitle) {
+        aCache.put("Title", textArticleTitle.getTitle());
         map.clear();
         map.put("AreaNO", textArticleTitle.getAreaOn());
         map.put("type", "cn_word");

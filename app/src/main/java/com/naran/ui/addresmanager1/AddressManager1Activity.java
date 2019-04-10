@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.lykj.aextreme.afinal.utils.Debug;
 import com.naran.ui.addressmanager.OnAddressClickListener;
 import com.naran.ui.addressmanager.OnAddressClickTask;
 import com.naran.ui.addressmanager.TextArticleTitle;

@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
 import com.cunoraz.gifview.library.GifView;
+import com.lykj.aextreme.afinal.utils.ACache;
 import com.lykj.aextreme.afinal.utils.Debug;
 import com.naran.ui.Act_Login;
 import com.naran.ui.addressmanager.AddressManagerActivity;
@@ -97,6 +98,8 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
     private Handler handler;
     private List<String> maljilQagOor;
     private List<ArticalModel> articalModels;
+    private ACache aCache;
+
     @Override
     public int initLayoutId() {
         return R.layout.view_mu_home;
@@ -104,7 +107,7 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
 
     @Override
     public void initView() {
-
+        aCache = ACache.get(context);
     }
 
     @Override
@@ -118,6 +121,13 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
         map.put("type", "mn_word");
         map.put("TimeNumber", "1");
         getWeekDatas();
+        if (aCache.getAsString("AreaNO") != null) {
+            map.clear();
+            map.put("AreaNO", aCache.getAsString("AreaNO"));
+            map.put("type", "mn_word");
+            getRealTimeWeek();
+            getWeekDatas();
+        }
     }
 
     @Override
@@ -432,6 +442,7 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
             public void requestFailure(Request request, IOException e) {
                 Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
             }
+
             public void requestSuccess(String result) throws Exception {
                 List<AreaModel> areaModels = new ArrayList<>();
                 JSONObject jsonObject = new JSONObject(result);
@@ -477,7 +488,6 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
     }
 
     private void saveArea(String areaNO, String areaName) {
-
         SharedPreferences sp = getActivity().getSharedPreferences("area", Context.MODE_PRIVATE);
         sp.edit().putString("AreaNO", areaNO).putString("areaName", areaName).commit();
     }
@@ -652,9 +662,13 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
         weekLayout.addView(realTimeWeather);
     }
 
+    /**
+     * 选中天气情况更新信息
+     *
+     * @param tag
+     */
     @Override
     public void onClick(int tag, final TextArticleTitle textArticleTitle) {
-        Log.e("aa", "--------蒙管理地区-----更新----");
         if (tag == -1) {
             handler.post(new Runnable() {
                 @Override
@@ -667,7 +681,9 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
     }
 
     private void updateWeather(TextArticleTitle textArticleTitle) {
-        Log.e("aa","---------更新----getAreaOn------"+textArticleTitle.getAreaOn());
+        Log.e("aa", "---------更新----getAreaOn------" + textArticleTitle.getAreaOn());
+        aCache.put("AreaNO", textArticleTitle.getAreaOn());
+        aCache.put("Title", textArticleTitle.getTitle());
         map.clear();
         map.put("AreaNO", textArticleTitle.getAreaOn());
         map.put("type", "mn_word");
