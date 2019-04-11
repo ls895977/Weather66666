@@ -2,6 +2,7 @@ package com.naran.ui;
 
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -31,17 +32,21 @@ public class Act_MyWeb extends BaseActivity {
         Debug.e("-------------myWebView==" + url);
         myWebView.loadUrl(url);
         WebSettings webSettings = myWebView.getSettings();
-        webSettings.setUseWideViewPort(true);//设置此属性，可任意比例缩放
+        //支持javascript
+        webSettings.setJavaScriptEnabled(true);
+// 设置可以支持缩放
+        webSettings.setSupportZoom(true);
+// 设置出现缩放工具
+        webSettings.setBuiltInZoomControls(true);
+//扩大比例的缩放
+        webSettings.setUseWideViewPort(true);
+//自适应屏幕
+        webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         webSettings.setLoadWithOverviewMode(true);
-        webSettings.setJavaScriptEnabled(true);  //支持js
-        webSettings.setUseWideViewPort(false);  //将图片调整到适合webview的大小
-        webSettings.setSupportZoom(true);  //支持缩放
-        webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);  //关闭webview中缓存
-        webSettings.setAllowFileAccess(true);  //设置可以访问文件
-        webSettings.setNeedInitialFocus(true); //当webview调用requestFocus时为webview设置节点
-        webSettings.setJavaScriptCanOpenWindowsAutomatically(true); //支持通过JS打开新窗口
-        webSettings.setLoadWithOverviewMode(true); // 缩放至屏幕的大小
-        webSettings.setLoadsImagesAutomatically(true);  //支持自动加载图片
+        myWebView.setWebChromeClient(new WebChromeClient());
+
+
+
     }
 
     @Override
