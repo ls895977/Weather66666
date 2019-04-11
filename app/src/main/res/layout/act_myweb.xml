@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_70">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_70"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="@dimen/dip_40"
+                android:layout_height="@dimen/dip_40"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/back" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/myWeb1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+</LinearLayout>

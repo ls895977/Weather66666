@@ -1,6 +1,7 @@
 package com.naran.ui.common;
 import android.content.Context;
 import com.lykj.aextreme.afinal.common.BaseApplication;
+
 public class MyApplication extends BaseApplication {
     private static MyApplication app;
     public static MyApplication getApp() {

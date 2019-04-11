@@ -1,5 +1,6 @@
 package com.naran.ui.fgt.home.fgt;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +10,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Bundle;
 import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -26,9 +28,11 @@ import android.widget.Toast;
 
 import com.baidu.mapapi.SDKInitializer;
 import com.cunoraz.gifview.library.GifView;
+import com.lykj.aextreme.afinal.libzxing.activity.CaptureActivity;
 import com.lykj.aextreme.afinal.utils.ACache;
 import com.lykj.aextreme.afinal.utils.Debug;
 import com.naran.ui.Act_Login;
+import com.naran.ui.Act_MyWeb;
 import com.naran.ui.addressmanager.AddressManagerActivity;
 import com.naran.ui.addressmanager.OnAddressClickListener;
 import com.naran.ui.addressmanager.OnAddressClickTask;
@@ -42,6 +46,7 @@ import com.naran.ui.modle.RealTimeWeatherModel;
 import com.naran.ui.modle.WarnListInfoModel;
 import com.naran.ui.modle.WeekWeatherModel;
 import com.naran.ui.modle.WranAndServiceModel;
+import com.naran.ui.permission.RxPermissions;
 import com.naran.ui.utils.LoginUtil;
 import com.naran.ui.view.MnArticalView8;
 import com.naran.ui.view.MnTextView;
@@ -61,6 +66,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import io.reactivex.functions.Consumer;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -110,29 +116,33 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
         aCache = ACache.get(context);
     }
 
+    private static boolean onResumeStatus = true;
+
     @Override
     public void onResume() {
         super.onResume();
-        handler = new Handler();
-        hideHeader();
-        initViews();
-        OnAddressClickTask.getInstance().addListener(this);
-        getArea();
-        map.put("type", "mn_word");
-        map.put("TimeNumber", "1");
-        getWeekDatas();
-        if (aCache.getAsString("AreaNO") != null) {
-            map.clear();
-            map.put("AreaNO", aCache.getAsString("AreaNO"));
+        if (onResumeStatus) {
+            handler = new Handler();
+            hideHeader();
+            initViews();
+            OnAddressClickTask.getInstance().addListener(this);
+            getArea();
             map.put("type", "mn_word");
-            getRealTimeWeek();
+            map.put("TimeNumber", "1");
             getWeekDatas();
+            if (aCache.getAsString("AreaNO") != null) {
+                map.clear();
+                map.put("AreaNO", aCache.getAsString("AreaNO"));
+                map.put("type", "mn_word");
+                getRealTimeWeek();
+                getWeekDatas();
+            }
         }
     }
 
     @Override
     public void initData() {
-
+        rxPermissions = new RxPermissions(getActivity());
     }
 
     @Override
@@ -145,9 +155,52 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
 
     }
 
+    private RxPermissions rxPermissions;
+
     @Override
     public void onViewClick(View v) {
+        switch (v.getId()) {
+            case R.id.mySaomiao://扫描
+                rxPermissions
+                        .request(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                        .subscribe(new Consumer<Boolean>() {
+                            @Override
+                            public void accept(Boolean aBoolean) {
+                                if (aBoolean) {
+                                    onResumeStatus = false;
+                                    Intent intent = new Intent(context, CaptureActivity.class);
+                                    startActivityForResult(intent, REQUEST_CODE);
+                                } else {
+                                    Toast.makeText(context, "请打开读写存储卡权限", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                break;
+        }
+    }
 
+    private int REQUEST_CODE = 100;
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        onResumeStatus = true;
+        /**
+         * 处理二维码扫描结果
+         */
+        if (requestCode == REQUEST_CODE) {
+            //处理扫描结果（在界面上显示）
+            if (null != data) {
+                Bundle bundle = data.getExtras();
+                if (bundle == null) {
+                    return;
+                }
+                String result = bundle.getString("result");
+                Intent intent = new Intent();
+                intent.putExtra("result", result);
+                startAct(intent, Act_MyWeb.class);
+            }
+        }
     }
 
     @Override
@@ -157,6 +210,7 @@ public class FgtMuHome extends BaseFgt implements OnAddressClickListener {
 
     private void initViews() {
         gifView = getView(R.id.gifView);
+        setOnClickListener(R.id.mySaomiao);
 //        gifView.setGifResource(R.drawable.raining);
         orgnization = getView(R.id.textview_weather_orgnization);
         line_weather_fire = getView(R.id.line_weather_fire);

@@ -74,6 +74,13 @@
                                         android:text="2017-03-23"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#FFF" />
+                                    <ImageView
+                                        android:id="@+id/mySaomiao"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:padding="@dimen/dip_15"
+                                        android:src="@mipmap/icon_saomiao" />
                                 </RelativeLayout>
 
                                 <LinearLayout

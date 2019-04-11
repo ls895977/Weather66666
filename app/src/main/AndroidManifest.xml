@@ -132,6 +132,8 @@
         <!--首页==蒙文=定位地址查询-->
         <activity android:name="com.naran.ui.addressmanager.AddressManagerActivity" />
         <activity android:name="com.naran.ui.addressmanager.AddAddressActivity" />
+        <!--首页==扫描=显示网址-->
+        <activity android:name="com.naran.ui.Act_MyWeb"/>
     </application>
 
 </manifest>
