@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
     android:orientation="vertical">
-
     <SurfaceView
         android:id="@+id/capture_preview"
         android:layout_width="match_parent"
@@ -68,5 +67,12 @@
 
         </RelativeLayout>
     </RelativeLayout>
-
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        android:src="@drawable/btn_back"
+        android:layout_height="wrap_content" />
 </RelativeLayout>
